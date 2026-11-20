@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* CallBook design tokens (from callbook-views/*.dc.html) */
+@theme inline {
+  --font-sans: var(--font-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+@theme {
+  --color-canvas: #f0f6fc;
+  --color-surface: #dcebf8;
+  --color-surface-strong: #c7def2;
+  --color-tile: #f2f8fd;
+  --color-ink: #10273d;
+  --color-ink-soft: #34506a;
+  --color-muted: #50677d;
+  --color-faint: #3f5f7c;
+  --color-line: #d6e4f0;
+  --color-line-soft: #e6eff7;
+  --color-field: #c9dcec;
+  --color-accent: #2b7bc0;
+  --color-link: #1d5f96;
+  --color-link-hover: #14466f;
+  --color-avatar: #cfe3f5;
+  --color-chip: #e1eef9;
+  --color-chip-ink: #1e4a73;
+  --color-danger: #b42318;
+  --color-danger-soft: #fdf1f0;
+  --color-danger-line: #f3c6c2;
+  --color-danger-ink: #8f1d14;
+  --color-warning: #c7781f;
+  --color-warning-ink: #7a3e0c;
+  --color-success: #2e8b57;
+  --color-success-soft: #e6f1e9;
+  --color-success-ink: #25553a;
+  --color-offline: #9a9397;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}

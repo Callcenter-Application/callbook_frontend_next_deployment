@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CallBook – Live calls</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F0F6FC}
+a{color:#1D5F96}a:hover{color:#14466F}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 800px; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #10273D; background: #F0F6FC">
+
+  <aside style="flex: 1 0 220px; max-width: 100%; box-sizing: border-box; color: #10273D; padding: 24px 16px; display: flex; flex-direction: column; gap: 28px; background-color: #DCEBF8; width: 219px; height: 842px">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+      <div style="width: 32px; height: 32px; border-radius: 8px; background: {{accent}}; display: flex; align-items: center; justify-content: center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+      </div>
+      <span style="font-size: 18px; font-weight: 600; letter-spacing: -0.01em">CallBook</span>
+    </div>
+    <nav aria-label="Main" style="display: flex; flex-direction: column; gap: 2px">
+      <a href="#" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; color: #34536F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>
+        Home
+      </a>
+      <a href="#" aria-current="page" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; background: #FFFFFF; color: #10273D; font-weight: 500; box-shadow: inset 3px 0 0 {{accent}}">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+        <span>Live calls IVR<br></span>
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; color: #34536F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"></circle><path d="M2 21a7 7 0 0 1 14 0"></path><path d="M16 3.5a4 4 0 0 1 0 9"></path><path d="M22 21a7 7 0 0 0-4-6.3"></path></svg>
+        Users
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; color: #34536F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"></path><path d="M3 6h.01M3 12h.01M3 18h.01"></path></svg>
+        Queues
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; color: #34536F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 10a7 7 0 0 0 14 0"></path><path d="M12 17v4"></path></svg>
+        Recordings
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; color: #34536F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15v-3M12 15V8M17 15v-6"></path></svg>
+        Reports
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; color: #34536F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg>
+        Settings
+      </a>
+    </nav>
+    <div style="margin-top: auto; padding: 14px 12px; border-radius: 10px; background: #C7DEF2; display: flex; flex-direction: column; gap: 4px">
+      <span style="font-size: 12px; color: #3F5F7C">Queue health</span>
+      <span style="font-size: 14px; font-weight: 500">All queues within SLA</span>
+    </div>
+  </aside>
+
+  <div style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 16px 28px 28px; display: flex; flex-direction: column; gap: 16px">
+
+    <header style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; height: auto; min-height: 44px; padding: 0 4px; border-bottom: 1px solid #D6E4F0; padding-bottom: 12px">
+      <label for="search" style="flex: 1 1 260px; max-width: 420px; display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #C9DCEC; border-radius: 8px; color: #50677D">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        <input id="search" type="search" placeholder="Search calls, agents, numbers" style="border: 0; outline: none; flex: 1; min-width: 0; font: inherit; font-size: 14px; background: transparent; color: #10273D">
+      </label>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 8px">
+        <button type="button" aria-label="Notifications" style="width: 44px; height: 44px; border: 0; border-radius: 8px; background: transparent; color: #34506A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"></path></svg>
+        </button>
+        <div style="display: flex; align-items: center; gap: 10px; padding-left: 8px">
+          <div style="width: 34px; height: 34px; border-radius: 50%; background: #CFE3F5; color: #14466F; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600">LR</div>
+          <div style="display: flex; flex-direction: column; line-height: 1.2">
+            <span style="font-size: 14px; font-weight: 500">Luis Reyes</span>
+            <span style="font-size: 12px; color: #50677D">Supervisor</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 4px 4px; border-style: solid; border-width: 1px; border-color: #DCEBF8; border-radius: 8px; width: 1007px; height: 58px; background-color: #DCEBF8">
+      <div style="display: flex; flex-direction: column; gap: 2px; margin-right: auto">
+        <h1 style="margin: 0; font-size: 26px; font-weight: 600; letter-spacing: -0.015em; font-style: italic">Live calls</h1>
+        <span style="font-size: 14px; color: #50677D">Real-time view of every active and waiting call</span>
+      </div>
+      <div role="group" aria-label="Time range" style="display: flex; background: #F0F6FC; border-radius: 8px; padding: 3px">
+        <button type="button" style="height: 38px; padding: 0 14px; border: 0; border-radius: 6px; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; color: #10273D; cursor: pointer">Today</button>
+        <button type="button" style="height: 38px; padding: 0 14px; border: 0; border-radius: 6px; background: transparent; font: inherit; font-size: 14px; color: #34506A; cursor: pointer">7 days</button>
+        <button type="button" style="height: 38px; padding: 0 14px; border: 0; border-radius: 6px; background: transparent; font: inherit; font-size: 14px; color: #34506A; cursor: pointer">30 days</button>
+      </div>
+      <button type="button" style="height: 44px; padding: 0 18px; border: 0; border-radius: 8px; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Export report</button>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 4px 4px; border-style: solid; border-width: 1px; border-color: #DCEBF8; border-radius: 8px; width: 1010px; height: 59px; background-color: #DCEBF8">
+      <div style="display: flex; flex-direction: column; gap: 2px; margin-right: auto">
+        <h2 style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em"><br></h2><span style="font-size: 14px; color: #50677D">{{activeSubtitle}}</span>
+        
+      </div>
+      <button type="button" onClick="{{toggleIvr}}" aria-pressed="{{ivrPressed}}" style="{{ivrBtn}}">IVR</button>
+      <div role="group" aria-label="Call controls" style="display: flex; background: #F0F6FC; border-radius: 8px; padding: 3px">
+        <button type="button" onClick="{{toggleHold}}" aria-pressed="{{holdPressed}}" style="{{holdBtn}}">{{holdLabel}}</button>
+        <button type="button" onClick="{{toggleMute}}" aria-pressed="{{mutePressed}}" style="{{muteBtn}}">{{muteLabel}}</button>
+      </div>
+      <button type="button" onClick="{{endCall}}" style="{{endBtn}}">End call</button>
+      <span style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 8px; background: #FFFFFF; font-size: 14px; color: #34506A"><span style="{{liveDot}}"></span>Duration
+        <span style="font-family: &quot;IBM Plex Mono&quot;, ui-monospace, monospace; font-weight: 500; color: rgb(16, 39, 61)">{{activeDuration}}</span>
+      </span>
+    </div><main style="flex: 1; background: #FFFFFF; border: 1px solid #D6E4F0; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 20px; min-width: 0; width: 993px; height: 513px; overflow-y: auto">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px">
+        <sc-for list="{{stats}}" as="s" hint-placeholder-count="4">
+          <div style="background: #F2F8FD; border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px">
+            <span style="font-size: 13px; color: #50677D">{{s.label}}</span>
+            <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 26px; font-weight: 500; letter-spacing: -0.02em">{{s.value}}</span>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+        <h2 style="margin: 0; font-size: 16px; font-weight: 600">Call queue</h2>
+        <a href="#" style="font-size: 14px; font-weight: 500">View all</a>
+      </div>
+
+      <div style="overflow-x: auto; margin: -4px -20px -20px; padding: 0 20px 8px; height: 341px">
+        <table style="width: 100%; min-width: 620px; border-collapse: collapse; font-size: 14px">
+          <thead>
+            <tr style="text-align: left; color: #50677D; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em">
+              <th style="font-weight: 500; padding: 10px 12px 10px 0; border-bottom: 1px solid #D6E4F0">Caller</th>
+              <th style="font-weight: 500; padding: 10px 12px; border-bottom: 1px solid #D6E4F0">Queue</th>
+              <th style="font-weight: 500; padding: 10px 12px; border-bottom: 1px solid #D6E4F0">Agent</th>
+              <th style="font-weight: 500; padding: 10px 12px; border-bottom: 1px solid #D6E4F0">Duration</th>
+              <th style="font-weight: 500; padding: 10px 12px; border-bottom: 1px solid #D6E4F0">Status</th>
+              <th style="font-weight: 500; padding: 10px 0 10px 12px; border-bottom: 1px solid #D6E4F0; text-align: right">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <sc-for list="{{calls}}" as="c" hint-placeholder-count="6">
+              <tr>
+                <td style="padding: 12px 12px 12px 0; border-bottom: 1px solid #E6EFF7">
+                  <div style="display: flex; flex-direction: column; gap: 2px">
+                    <span style="font-weight: 500">{{c.caller}}</span>
+                    <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #50677D">{{c.number}}</span>
+                  </div>
+                </td>
+                <td style="padding: 12px; border-bottom: 1px solid #E6EFF7">{{c.queue}}</td>
+                <td style="padding: 12px; border-bottom: 1px solid #E6EFF7">{{c.agent}}</td>
+                <td style="padding: 12px; border-bottom: 1px solid #E6EFF7; font-family: 'IBM Plex Mono', ui-monospace, monospace">{{c.duration}}</td>
+                <td style="padding: 12px; border-bottom: 1px solid #E6EFF7">
+                  <span style="{{c.pill}}">{{c.status}}</span>
+                </td>
+                <td style="padding: 12px 0 12px 12px; border-bottom: 1px solid #E6EFF7; text-align: right">
+                  <button type="button" onClick="{{c.join}}" aria-pressed="{{c.joinPressed}}" style="{{c.joinStyle}}">{{c.joinLabel}}</button>
+                </td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2B7BC0","options":["#2B7BC0","#1E6AA8","#2F6F9F","#3D7DB3"]},"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { active: 0, ivr: false, held: false, muted: false };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#2B7BC0';
+    const s = this.state;
+    const pills = {
+      'On call': 'background: #E3EEF8; color: #1F4E79;',
+      'Waiting': 'background: #FCEBD9; color: #7A3E0C;',
+      'On hold': 'background: #E1EEF9; color: #1E4A73;',
+      'Wrap-up': 'background: #E6F1E9; color: #25553A;'
+    };
+    const pillBase = 'display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; font-size: 12px; font-weight: 500; ';
+    const calls = [
+      { caller: 'Maria Gómez', number: '+57 300 555 0142', queue: 'Billing', agent: 'Andrés P.', duration: '04:12', status: 'On call' },
+      { caller: 'James Carter', number: '+1 305 555 0198', queue: 'Tech support', agent: '—', duration: '01:47', status: 'Waiting' },
+      { caller: 'Laura Méndez', number: '+57 315 555 0110', queue: 'Sales', agent: 'Camila R.', duration: '07:30', status: 'On hold' },
+      { caller: 'Daniel Ortiz', number: '+57 301 555 0177', queue: 'Billing', agent: 'Felipe M.', duration: '02:05', status: 'On call' },
+      { caller: 'Sophie Turner', number: '+1 786 555 0123', queue: 'Retention', agent: 'Valeria S.', duration: '00:42', status: 'Wrap-up' },
+      { caller: 'Carlos Ruiz', number: '+57 320 555 0189', queue: 'Tech support', agent: '—', duration: '00:58', status: 'Waiting' }
+    ].map((c, i) => {
+      const on = s.active === i;
+      return {
+        ...c,
+        pill: pillBase + pills[c.status],
+        joinLabel: on ? 'Joined' : 'Join',
+        joinPressed: on ? 'true' : 'false',
+        joinStyle: 'height: 36px; padding: 0 14px; border-radius: 8px; font: inherit; font-size: 13px; font-weight: 500; cursor: pointer; ' + (on ? 'border: 0; background: ' + accent + '; color: #FFFFFF;' : 'border: 1px solid #C9DCEC; background: #FFFFFF; color: #1D5F96;'),
+        join: () => this.setState({ active: i, ivr: false, held: false, muted: false })
+      };
+    });
+    const current = s.active === null ? null : calls[s.active];
+    const segBase = 'height: 38px; padding: 0 14px; border: 0; border-radius: 6px; font: inherit; font-size: 14px; cursor: pointer; ';
+    const segOn = 'background: #FFFFFF; color: #10273D; font-weight: 500;';
+    const segOff = 'background: transparent; color: #34506A;';
+    const stats = [
+      { label: 'Active calls', value: '24' },
+      { label: 'In queue', value: '7' },
+      { label: 'Avg. wait', value: '01:32' },
+      { label: 'Agents online', value: '18/22' }
+    ];
+    return {
+      accent,
+      calls,
+      stats,
+      activeTitle: current ? 'My call · ' + current.caller : 'No active call',
+      activeSubtitle: current ? current.queue + ' · with ' + (current.agent === '—' ? 'queue' : current.agent) + ' · Real-time call disposition' : 'Join a call from the queue to listen in or take over',
+      activeDuration: current ? current.duration : '00:00',
+      liveDot: 'width: 8px; height: 8px; border-radius: 50%; display: inline-block; background: ' + (current ? (s.held ? '#C7781F' : '#2E8B57') : '#9A9397') + ';',
+      toggleIvr: () => current && this.setState({ ivr: !s.ivr }),
+      ivrPressed: s.ivr ? 'true' : 'false',
+      ivrBtn: 'height: 44px; padding: 0 18px; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; ' + (s.ivr ? 'border: 0; background: ' + accent + '; color: #FFFFFF;' : 'border: 1px solid ' + accent + '; background: #FFFFFF; color: #1D5F96;'),
+      toggleHold: () => current && this.setState({ held: !s.held }),
+      holdPressed: s.held ? 'true' : 'false',
+      holdBtn: segBase + (s.held ? segOn : segOff),
+      holdLabel: s.held ? 'Resume' : 'Hold',
+      toggleMute: () => current && this.setState({ muted: !s.muted }),
+      mutePressed: s.muted ? 'true' : 'false',
+      muteBtn: segBase + (s.muted ? segOn : segOff),
+      muteLabel: s.muted ? 'Unmute' : 'Mute',
+      endCall: () => this.setState({ active: null, ivr: false, held: false, muted: false }),
+      endBtn: 'height: 44px; padding: 0 18px; border: 0; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; ' + (current ? 'background: #B42318; color: #FFFFFF;' : 'background: #E6EFF7; color: #50677D;')
+    };
+  }
+}
+</script>
+</body>
+</html>

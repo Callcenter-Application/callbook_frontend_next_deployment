@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CallBook – Create user</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F0F6FC}
+a{color:#1D5F96}a:hover{color:#14466F}
+</style>
+</helmet>
+<div style="width: 590px; min-height: 760px; box-sizing: border-box; padding: 32px; background: #F0F6FC; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #10273D; height: 816px">
+  <form style="background: #FFFFFF; border: 1px solid #D6E4F0; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 20px; width: 508px; height: 721px">
+
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <h1 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.015em">Create user</h1>
+      <span style="font-size: 14px; color: #50677D">Add a new supervisor, operator or administrator</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <label for="first-name" style="font-size: 13px; font-weight: 500; color: #34506A">First name</label>
+        <input id="first-name" type="text" placeholder="e.g. Natalia" value="{{firstName}}" onChange="{{setFirstName}}" style="height: 44px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9DCEC; border-radius: 8px; font: inherit; font-size: 14px; color: #10273D; background: #FFFFFF">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <label for="last-name" style="font-size: 13px; font-weight: 500; color: #34506A">Last name</label>
+        <input id="last-name" type="text" placeholder="e.g. Herrera" value="{{lastName}}" onChange="{{setLastName}}" style="height: 44px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9DCEC; border-radius: 8px; font: inherit; font-size: 14px; color: #10273D; background: #FFFFFF">
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="password" style="font-size: 13px; font-weight: 500; color: #34506A">Password</label>
+      <input id="password" type="password" placeholder="At least 8 characters" value="{{password}}" onChange="{{setPassword}}" style="height: 44px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9DCEC; border-radius: 8px; font: inherit; font-size: 14px; color: #10273D; background: #FFFFFF">
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="confirm-password" style="font-size: 13px; font-weight: 500; color: #34506A">Confirm password</label>
+      <input id="confirm-password" type="password" placeholder="Repeat the password" value="{{confirm}}" onChange="{{setConfirm}}" style="{{confirmStyle}}">
+      <sc-if value="{{mismatch}}" hint-placeholder-val="{{ false }}">
+        <span style="font-size: 12px; color: #B42318">Passwords don't match</span>
+      </sc-if>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+      <div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; min-width: 0">
+        <span id="role-label" style="font-size: 13px; font-weight: 500; color: #34506A">Role</span>
+        <button type="button" aria-haspopup="listbox" aria-expanded="{{menuExpanded}}" aria-labelledby="role-label" onClick="{{toggleMenu}}" style="height: 44px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9DCEC; border-radius: 8px; background: #FFFFFF; font: inherit; font-size: 14px; color: {{triggerColor}}; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left">
+          {{triggerLabel}}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34506A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="{{chevronStyle}}"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+        <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ true }}">
+          <div role="listbox" aria-labelledby="role-label" style="display: flex; flex-direction: column; gap: 2px; padding: 4px; border: 1px solid #D6E4F0; border-radius: 8px; background: #FFFFFF; box-shadow: 0 6px 16px rgba(16, 39, 61, 0.08)">
+            <sc-for list="{{roles}}" as="r" hint-placeholder-count="3">
+              <button type="button" role="option" aria-selected="{{r.selected}}" onClick="{{r.pick}}" style="{{r.style}}">
+                <span style="{{r.swatch}}"></span>
+                {{r.label}}
+              </button>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="flex: 1 1 200px; box-sizing: border-box; background: #F2F8FD; border: 1px solid #D6E4F0; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+        <span style="font-size: 12px; font-weight: 500; color: #50677D; text-transform: uppercase; letter-spacing: 0.04em">User preview</span>
+        <div style="display: flex; align-items: center; gap: 12px">
+          <div style="width: 44px; height: 44px; flex: none; border-radius: 50%; background: #CFE3F5; color: #14466F; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600">{{initials}}</div>
+          <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+            <span style="font-size: 15px; font-weight: 500; color: {{firstColor}}">{{previewFirst}}</span>
+            <span style="font-size: 14px; color: {{lastColor}}">{{previewLast}}</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px">
+          <span style="font-size: 13px; color: #50677D">Role</span>
+          <span style="{{previewPill}}">{{previewRole}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: flex-end; gap: 10px; padding-top: 16px; border-top: 1px solid #E6EFF7">
+      <button type="button" style="height: 44px; padding: 0 18px; border: 1px solid #C9DCEC; border-radius: 8px; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; color: #34506A; cursor: pointer">Cancel</button>
+      <button type="submit" style="height: 44px; padding: 0 18px; border: 0; border-radius: 8px; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Create user</button>
+    </div>
+  </form>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2B7BC0","options":["#2B7BC0","#1E6AA8","#2F6F9F","#3D7DB3"]},"menuOpen":{"editor":"boolean","default":true},"$preview":{"width":600,"height":760}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstName: '',
+      lastName: '',
+      password: '',
+      confirm: '',
+      role: null,
+      open: props.menuOpen ?? true
+    };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#2B7BC0';
+    const s = this.state;
+    const roleDefs = [
+      { key: 'Admin', fill: '#E4E7FA', ink: '#353F8F' },
+      { key: 'Supervisor', fill: '#D6EAFB', ink: '#174A7A' },
+      { key: 'Operator', fill: '#DDF2F2', ink: '#1D5C5E' }
+    ];
+    const optionBase = 'height: 44px; padding: 0 10px; border: 0; border-radius: 6px; font: inherit; font-size: 14px; color: #10273D; cursor: pointer; display: flex; align-items: center; gap: 10px; text-align: left; ';
+    const roles = roleDefs.map((r) => {
+      const on = s.role === r.key;
+      return {
+        label: r.key,
+        selected: on ? 'true' : 'false',
+        style: optionBase + (on ? 'background: #DCEBF8; font-weight: 500;' : 'background: transparent;'),
+        swatch: 'width: 10px; height: 10px; border-radius: 50%; flex: none; background: ' + r.ink + ';',
+        pick: () => this.setState({ role: r.key, open: false })
+      };
+    });
+    const current = roleDefs.find((r) => r.key === s.role);
+    const pillBase = 'display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; font-size: 12px; font-weight: 500; ';
+    const mismatch = s.confirm.length > 0 && s.confirm !== s.password;
+    const inputBase = 'height: 44px; box-sizing: border-box; padding: 0 12px; border-radius: 8px; font: inherit; font-size: 14px; color: #10273D; background: #FFFFFF; ';
+    const first = s.firstName.trim();
+    const last = s.lastName.trim();
+    const initials = ((first[0] || '') + (last[0] || '')).toUpperCase() || '?';
+    return {
+      accent,
+      firstName: s.firstName,
+      lastName: s.lastName,
+      password: s.password,
+      confirm: s.confirm,
+      setFirstName: (e) => this.setState({ firstName: e.target.value }),
+      setLastName: (e) => this.setState({ lastName: e.target.value }),
+      setPassword: (e) => this.setState({ password: e.target.value }),
+      setConfirm: (e) => this.setState({ confirm: e.target.value }),
+      mismatch,
+      confirmStyle: inputBase + 'border: 1px solid ' + (mismatch ? '#B42318' : '#C9DCEC') + ';',
+      menuOpen: s.open,
+      menuExpanded: s.open ? 'true' : 'false',
+      toggleMenu: () => this.setState({ open: !s.open }),
+      chevronStyle: 'flex: none; transition: transform .15s; transform: rotate(' + (s.open ? '180deg' : '0deg') + ');',
+      triggerLabel: s.role || 'Select a role',
+      triggerColor: s.role ? '#10273D' : '#50677D',
+      roles,
+      initials,
+      previewFirst: first || 'First name',
+      previewLast: last || 'Last name',
+      firstColor: first ? '#10273D' : '#50677D',
+      lastColor: last ? '#34506A' : '#50677D',
+      previewRole: s.role || 'Not selected',
+      previewPill: pillBase + (current ? 'background: ' + current.fill + '; color: ' + current.ink + ';' : 'background: #E6EFF7; color: #50677D;')
+    };
+  }
+}
+</script>
+</body>
+</html>

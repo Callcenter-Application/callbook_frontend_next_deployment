@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CallBook – Settings</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F0F6FC}
+a{color:#1D5F96}a:hover{color:#14466F}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 800px; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #10273D; background: #F0F6FC">
+
+  <aside style="flex: 1 0 220px; max-width: 100%; box-sizing: border-box; color: #10273D; padding: 24px 16px; display: flex; flex-direction: column; gap: 28px; background-color: #DCEBF8; width: 219px; height: 842px">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+      <div style="width: 32px; height: 32px; border-radius: 8px; background: {{accent}}; display: flex; align-items: center; justify-content: center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+      </div>
+      <span style="font-size: 18px; font-weight: 600; letter-spacing: -0.01em">CallBook</span>
+    </div>
+    <nav aria-label="Main" style="display: flex; flex-direction: column; gap: 2px">
+      <a href="#" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; color: #34536F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>
+        Home
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; color: #34536F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+        <span>Live calls IVR</span>
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; color: #34536F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"></circle><path d="M2 21a7 7 0 0 1 14 0"></path><path d="M16 3.5a4 4 0 0 1 0 9"></path><path d="M22 21a7 7 0 0 0-4-6.3"></path></svg>
+        Users
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; color: #34536F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"></path><path d="M3 6h.01M3 12h.01M3 18h.01"></path></svg>
+        Queues
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; color: #34536F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 10a7 7 0 0 0 14 0"></path><path d="M12 17v4"></path></svg>
+        Recordings
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; color: #34536F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15v-3M12 15V8M17 15v-6"></path></svg>
+        Reports
+      </a>
+      <a href="#" aria-current="page" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; background: #FFFFFF; color: #10273D; font-weight: 500; box-shadow: inset 3px 0 0 {{accent}}">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg>
+        Settings
+      </a>
+    </nav>
+    <div style="margin-top: auto; padding: 14px 12px; border-radius: 10px; background: #C7DEF2; display: flex; flex-direction: column; gap: 4px">
+      <span style="font-size: 12px; color: #3F5F7C">Queue health</span>
+      <span style="font-size: 14px; font-weight: 500">All queues within SLA</span>
+    </div>
+  </aside>
+
+  <div style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 16px 28px 28px; display: flex; flex-direction: column; gap: 16px">
+
+    <header style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; height: auto; min-height: 44px; padding: 0 4px; border-bottom: 1px solid #D6E4F0; padding-bottom: 12px">
+      <label for="search" style="flex: 1 1 260px; max-width: 420px; display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #C9DCEC; border-radius: 8px; color: #50677D">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        <input id="search" type="search" placeholder="Search calls, agents, numbers" style="border: 0; outline: none; flex: 1; min-width: 0; font: inherit; font-size: 14px; background: transparent; color: #10273D">
+      </label>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 8px">
+        <button type="button" aria-label="Notifications" style="width: 44px; height: 44px; border: 0; border-radius: 8px; background: transparent; color: #34506A; display: flex; align-items: center; justify-content: center; cursor: pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"></path></svg>
+        </button>
+        <div style="display: flex; align-items: center; gap: 10px; padding-left: 8px">
+          <div style="width: 34px; height: 34px; border-radius: 50%; background: #CFE3F5; color: #14466F; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600">LR</div>
+          <div style="display: flex; flex-direction: column; line-height: 1.2">
+            <span style="font-size: 14px; font-weight: 500">Luis Reyes</span>
+            <span style="font-size: 12px; color: #50677D">Supervisor</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 4px 4px; border-style: solid; border-width: 1px; border-color: #DCEBF8; border-radius: 8px; width: 1007px; height: 58px; background-color: #DCEBF8">
+      <div style="display: flex; flex-direction: column; gap: 2px; margin-right: auto">
+        <h1 style="margin: 0; font-size: 26px; font-weight: 600; letter-spacing: -0.015em; font-style: italic">Settings</h1>
+        <span style="font-size: 14px; color: #50677D">{{saveHint}}</span>
+      </div>
+      <button type="button" onClick="{{discard}}" style="height: 44px; padding: 0 18px; border: 1px solid #C9DCEC; border-radius: 8px; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; color: #34506A; cursor: pointer">Discard</button>
+      <button type="button" onClick="{{save}}" style="height: 44px; padding: 0 18px; border: 0; border-radius: 8px; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Save changes</button>
+    </div>
+
+    <div style="display: flex; flex-wrap: nowrap; align-items: center; gap: 12px; padding: 4px 8px; border-style: solid; border-width: 1px; border-color: #DCEBF8; border-radius: 8px; width: 1010px; height: 59px; background-color: #DCEBF8; box-sizing: border-box">
+      <div role="tablist" aria-label="Settings sections" style="display: flex; gap: 4px; background: #F0F6FC; border-radius: 8px; padding: 3px">
+        <sc-for list="{{tabs}}" as="t" hint-placeholder-count="4">
+          <button type="button" role="tab" aria-selected="{{t.selected}}" onClick="{{t.pick}}" style="{{t.style}}">{{t.label}}</button>
+        </sc-for>
+      </div>
+      <span style="margin-left: auto; font-size: 13px; color: #50677D">Only administrators can change these settings</span>
+    </div>
+
+    <main style="flex: 1; background: #FFFFFF; border: 1px solid #D6E4F0; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 24px; min-width: 0; width: 993px; height: 513px; overflow-y: auto; box-sizing: border-box">
+
+      <sc-if value="{{isGeneral}}" hint-placeholder-val="{{ true }}">
+        <section style="display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 24px">
+          <div style="display: flex; flex-direction: column; gap: 4px">
+            <h2 style="margin: 0; font-size: 16px; font-weight: 600">General</h2>
+            <span style="font-size: 13px; color: #50677D">Company details and working hours used across CallBook.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="company" style="font-size: 13px; font-weight: 500; color: #34506A">Company name</label>
+              <input id="company" type="text" value="[YOUR COMPANY]" style="height: 44px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9DCEC; border-radius: 8px; font: inherit; font-size: 14px; color: #10273D">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="tz" style="font-size: 13px; font-weight: 500; color: #34506A">Time zone</label>
+              <select id="tz" style="height: 44px; padding: 0 10px; border: 1px solid #C9DCEC; border-radius: 8px; background: #FFFFFF; font: inherit; font-size: 14px; color: #10273D">
+                <option>America/Bogota (UTC−05:00)</option><option>America/New_York (UTC−05:00)</option><option>America/Mexico_City (UTC−06:00)</option>
+              </select>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="open" style="font-size: 13px; font-weight: 500; color: #34506A">Opens at</label>
+              <input id="open" type="time" value="07:00" style="height: 44px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9DCEC; border-radius: 8px; font: inherit; font-size: 14px; color: #10273D">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="close" style="font-size: 13px; font-weight: 500; color: #34506A">Closes at</label>
+              <input id="close" type="time" value="19:00" style="height: 44px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9DCEC; border-radius: 8px; font: inherit; font-size: 14px; color: #10273D">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="lang" style="font-size: 13px; font-weight: 500; color: #34506A">Default language</label>
+              <select id="lang" style="height: 44px; padding: 0 10px; border: 1px solid #C9DCEC; border-radius: 8px; background: #FFFFFF; font: inherit; font-size: 14px; color: #10273D">
+                <option>English</option><option>Spanish</option>
+              </select>
+            </div>
+          </div>
+        </section>
+      </sc-if>
+
+      <sc-if value="{{isRouting}}" hint-placeholder-val="{{ false }}">
+        <section style="display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 24px">
+          <div style="display: flex; flex-direction: column; gap: 4px">
+            <h2 style="margin: 0; font-size: 16px; font-weight: 600">Call routing</h2>
+            <span style="font-size: 13px; color: #50677D">How calls are assigned and when they overflow to another queue.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="strategy" style="font-size: 13px; font-weight: 500; color: #34506A">Routing strategy</label>
+              <select id="strategy" style="height: 44px; padding: 0 10px; border: 1px solid #C9DCEC; border-radius: 8px; background: #FFFFFF; font: inherit; font-size: 14px; color: #10273D">
+                <option>Longest idle agent</option><option>Round robin</option><option>Skills-based</option>
+              </select>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="overflow" style="font-size: 13px; font-weight: 500; color: #34506A">Overflow after (seconds)</label>
+              <input id="overflow" type="number" value="120" style="height: 44px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9DCEC; border-radius: 8px; font: inherit; font-size: 14px; color: #10273D">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="sla" style="font-size: 13px; font-weight: 500; color: #34506A">Service level target (%)</label>
+              <input id="sla" type="number" value="80" style="height: 44px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9DCEC; border-radius: 8px; font: inherit; font-size: 14px; color: #10273D">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="answer" style="font-size: 13px; font-weight: 500; color: #34506A">Answer within (seconds)</label>
+              <input id="answer" type="number" value="30" style="height: 44px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9DCEC; border-radius: 8px; font: inherit; font-size: 14px; color: #10273D">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="wrap" style="font-size: 13px; font-weight: 500; color: #34506A">Wrap-up time (seconds)</label>
+              <input id="wrap" type="number" value="45" style="height: 44px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9DCEC; border-radius: 8px; font: inherit; font-size: 14px; color: #10273D">
+            </div>
+          </div>
+        </section>
+      </sc-if>
+
+      <sc-if value="{{isRecording}}" hint-placeholder-val="{{ false }}">
+        <section style="display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 24px">
+          <div style="display: flex; flex-direction: column; gap: 4px">
+            <h2 style="margin: 0; font-size: 16px; font-weight: 600">Recordings</h2>
+            <span style="font-size: 13px; color: #50677D">What gets recorded and how long it is kept.</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 16px">
+            <div style="display: flex; flex-direction: column; gap: 6px; max-width: 320px">
+              <label for="retention" style="font-size: 13px; font-weight: 500; color: #34506A">Keep recordings for</label>
+              <select id="retention" style="height: 44px; padding: 0 10px; border: 1px solid #C9DCEC; border-radius: 8px; background: #FFFFFF; font: inherit; font-size: 14px; color: #10273D">
+                <option>90 days</option><option>6 months</option><option>1 year</option>
+              </select>
+            </div>
+          </div>
+        </section>
+      </sc-if>
+
+      <section style="display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 24px; padding-top: 20px; border-top: 1px solid #E6EFF7">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <h2 style="margin: 0; font-size: 16px; font-weight: 600">{{toggleTitle}}</h2>
+          <span style="font-size: 13px; color: #50677D">Turn features on or off for everyone.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <sc-for list="{{toggles}}" as="o" hint-placeholder-count="3">
+            <div style="display: flex; align-items: center; gap: 16px; padding: 10px 0; border-bottom: 1px solid #E6EFF7">
+              <div style="display: flex; flex-direction: column; gap: 2px; margin-right: auto">
+                <span style="font-size: 14px; font-weight: 500">{{o.label}}</span>
+                <span style="font-size: 13px; color: #50677D">{{o.hint}}</span>
+              </div>
+              <button type="button" role="switch" aria-checked="{{o.checked}}" aria-label="{{o.label}}" onClick="{{o.toggle}}" style="{{o.track}}">
+                <span style="{{o.knob}}"></span>
+              </button>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2B7BC0","options":["#2B7BC0","#1E6AA8","#2F6F9F","#3D7DB3"]},"$preview":{"width":1280,"height":843}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tab: 'General',
+      dirty: false,
+      saved: false,
+      on: {
+        darkMode: false, autoAway: true, twoFactor: true,
+        callbacks: true, vipPriority: false, autoWrap: true,
+        recordAll: true, pauseOnPayment: true, transcripts: false,
+        emailAlerts: true, slaAlerts: true, dailySummary: false
+      }
+    };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#2B7BC0';
+    const s = this.state;
+    const tabNames = ['General', 'Call routing', 'Recordings', 'Notifications'];
+    const tabBase = 'height: 38px; padding: 0 14px; border: 0; border-radius: 6px; font: inherit; font-size: 14px; cursor: pointer; ';
+    const tabs = tabNames.map((label) => ({
+      label,
+      selected: s.tab === label ? 'true' : 'false',
+      style: tabBase + (s.tab === label ? 'background: #FFFFFF; color: #10273D; font-weight: 500;' : 'background: transparent; color: #34506A;'),
+      pick: () => this.setState({ tab: label })
+    }));
+    const groups = {
+      'General': [
+        ['autoAway', 'Auto-away', 'Set agents to Away after 10 minutes without activity'],
+        ['twoFactor', 'Two-factor sign-in', 'Require a code for every user at sign-in'],
+        ['darkMode', 'Dark mode', 'Use a dark theme by default']
+      ],
+      'Call routing': [
+        ['callbacks', 'Offer callbacks', 'Let callers request a callback instead of waiting'],
+        ['vipPriority', 'VIP priority', 'Move VIP customers to the front of the queue'],
+        ['autoWrap', 'Automatic wrap-up', 'End wrap-up automatically when the timer runs out']
+      ],
+      'Recordings': [
+        ['recordAll', 'Record all calls', 'Inbound and outbound calls are recorded'],
+        ['pauseOnPayment', 'Pause on payment', 'Stop recording while card details are taken'],
+        ['transcripts', 'Transcripts', 'Create a text transcript for each recording']
+      ],
+      'Notifications': [
+        ['emailAlerts', 'Email alerts', 'Send alerts to supervisors by email'],
+        ['slaAlerts', 'Service level alerts', 'Notify when a queue drops below target'],
+        ['dailySummary', 'Daily summary', 'Send a summary of the day at closing time']
+      ]
+    };
+    const toggles = groups[s.tab].map(([key, label, hint]) => {
+      const on = !!s.on[key];
+      return {
+        label,
+        hint,
+        checked: on ? 'true' : 'false',
+        track: 'width: 44px; height: 26px; flex: none; border: 0; border-radius: 999px; padding: 3px; cursor: pointer; display: flex; align-items: center; box-sizing: border-box; background: ' + (on ? accent : '#C9DCEC') + '; justify-content: ' + (on ? 'flex-end' : 'flex-start') + ';',
+        knob: 'width: 20px; height: 20px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,39,61,.25);',
+        toggle: () => this.setState({ on: { ...this.state.on, [key]: !on }, dirty: true, saved: false })
+      };
+    });
+    return {
+      accent,
+      tabs,
+      toggles,
+      isGeneral: s.tab === 'General',
+      isRouting: s.tab === 'Call routing',
+      isRecording: s.tab === 'Recordings',
+      toggleTitle: s.tab === 'Notifications' ? 'Notifications' : 'Options',
+      saveHint: s.saved ? 'All changes saved' : (s.dirty ? 'You have unsaved changes' : 'Configure the platform for your team'),
+      save: () => this.setState({ dirty: false, saved: true }),
+      discard: () => this.setState({ dirty: false, saved: false })
+    };
+  }
+}
+</script>
+</body>
+</html>
